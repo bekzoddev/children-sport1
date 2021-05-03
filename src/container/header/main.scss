@@ -1,0 +1,24 @@
+.header {
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1300px;
+  margin: auto;
+  padding: 10px 15px;
+  p {
+    padding: 20px 20px;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+.wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 100;
+  background: #000;
+}
+.header.hidden {
+  display: none;
+}
