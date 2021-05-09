@@ -11,12 +11,10 @@ const TopShows = () => {
       }
     })
       .then(function (javop) {
-        console.log(javop);
         setMovie({answer:true, results: javop.data.results})
-        console.log(movie);
 
       });
-      console.log(movie)
+
   },[])
   return (
 

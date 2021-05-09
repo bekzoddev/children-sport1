@@ -1,7 +1,6 @@
 
-import { Link,BrowserRouter as Router,Route,Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ThemeChanger } from "../../theme/theme";
-import SingleMovie from "../../pages/singleMovie/single";
 import { useContext } from "react";
 const LatestPageMovies = ({info,img,title,year,genre,language,id})=> {
   const [data,lang] = useContext(ThemeChanger)
@@ -21,10 +20,10 @@ const LatestPageMovies = ({info,img,title,year,genre,language,id})=> {
           <span className="genre">{genre}</span>
           <span className="language">{language}</span>
         </div>
-        <a href="#">
+        <a href="https://www.kun.uz">
            {
              (data.find(item => {
-               if (item.lang == lang) {
+               if (item.lang === lang) {
                  return item
                }
              })).watch
@@ -32,7 +31,7 @@ const LatestPageMovies = ({info,img,title,year,genre,language,id})=> {
         </a>
         <Link to={`/movie/${id}`}>
           {(data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).more

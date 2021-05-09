@@ -1,6 +1,6 @@
 import "./main.scss";
-import { Link,BrowserRouter as Router,Route,Switch } from "react-router-dom";
-import SingleMovie from "../../pages/singleMovie/single";
+import { Link } from "react-router-dom";
+
 import { ThemeChanger } from "../../theme/theme";
 import { useContext } from "react";
 const HomePageMovies = ({info,img,title,year,genre,language,id})=> {
@@ -21,17 +21,17 @@ const HomePageMovies = ({info,img,title,year,genre,language,id})=> {
           <span className="genre">{genre}</span>
           <span className="language">{language}</span>
         </div>
-        <a href = "#" >
+        <a href = "https://www.kun.uz" >
           {
             (data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).watch
           }
         </a>
         <Link to={`/movie/${id}`}>{(data.find(item => {
-          if (item.lang == lang) {
+          if (item.lang === lang) {
             return item
           }
         })).more}</Link>

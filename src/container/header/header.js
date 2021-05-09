@@ -1,15 +1,10 @@
 import "./main.scss";
 import { Link } from "react-router-dom";
 import { ThemeChanger } from "../../theme/theme";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 const Header = () => {
   const [data,lang,setLang] = useContext(ThemeChanger)
-  const [search,setSearch] = useState("")
-function some() {
-  document.querySelector(".input").classList.toggle("hidden")
-  document.querySelector(".search-btn").classList.toggle("hidden")
-  document.querySelector(".header").classList.toggle("hidden")
-}
+
 
   return (
     <div className="wrapper">
@@ -26,7 +21,7 @@ function some() {
          <p>
              {
                (data.find(item => {
-                 if (item.lang == lang) {
+                 if (item.lang === lang) {
                    return item
                  }
                })).home
@@ -34,14 +29,12 @@ function some() {
          </p>
 
         </Link>
-        <Link to="/some">
-        some
-        </Link>
+
         <Link to="/about">
          <p>
              {
                (data.find(item => {
-                 if (item.lang == lang) {
+                 if (item.lang === lang) {
                    return item
                  }
                })).about
@@ -51,7 +44,7 @@ function some() {
         <Link to="/contact">
           < p > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).aloqa
@@ -60,7 +53,7 @@ function some() {
         <Link to="/popular">
            < p > {
              (data.find(item => {
-               if (item.lang == lang) {
+               if (item.lang === lang) {
                  return item
                }
              })).popular
@@ -69,7 +62,7 @@ function some() {
         <Link to="/most">
            < p > {
              (data.find(item => {
-               if (item.lang == lang) {
+               if (item.lang === lang) {
                  return item
                }
              })).top
@@ -78,7 +71,7 @@ function some() {
         <Link to="/shows">
            < p > {
              (data.find(item => {
-               if (item.lang == lang) {
+               if (item.lang === lang) {
                  return item
                }
              })).show
@@ -89,56 +82,56 @@ function some() {
             < option value = "disable"
             defaultValue disabled > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).janr
             }</option>
             < option value = "crime" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).crime
             } </option>
             < option value = "sport" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).sport
             } </option>
             < option value = "documentary" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).hujjat
             } </option>
             < option value = "romantic" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).romantik
             } </option>
             < option value = "biography" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).bio
             } </option>
             < option value = "drama" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).drama
             } </option>
             < option value = "history" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).tarixiy

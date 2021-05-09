@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./main.scss";
@@ -6,6 +7,7 @@ import { ThemeChanger } from "../../theme/theme";
 
 
 const SingleMovie = ({ match }) => {
+  const some = useParams()
   const [data,lang] = useContext(ThemeChanger)
   const [inform, setInfo] = useState({ IsComeInfo: false, info: [] })
   const [actors, setActors] = useState({ actorIsFetched: false, list: [] })
@@ -36,6 +38,7 @@ const SingleMovie = ({ match }) => {
           list: javop.data.cast
         })
       })
+
       axios.get(`https://api.themoviedb.org/3/movie/${match.params.id}/recommendations`, {
         params: {
           api_key: "8d08d31e1b08de961a19e2ae293de867"
@@ -51,7 +54,7 @@ const SingleMovie = ({ match }) => {
 
       })
 
-
+       console.log(some,"hhh");
             }, [])
 
             return (

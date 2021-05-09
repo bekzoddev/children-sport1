@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { ThemeChanger } from "../../theme/theme";
 const About = ()=> {
   const [data,lang] =  useContext(ThemeChanger)
@@ -7,7 +7,7 @@ const About = ()=> {
       <h2 >
         {
           (data.find(item => {
-            if (item.lang == lang) {
+            if (item.lang === lang) {
               return item
             }
           }).about)
@@ -15,7 +15,7 @@ const About = ()=> {
       </h2>
     {
       (data.find(item => {
-        if (item.lang == lang) {
+        if (item.lang === lang) {
           return item
         }
       }).text)

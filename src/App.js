@@ -5,7 +5,7 @@ import {
   Switch,
   Route
   } from "react-router-dom";
-import { useEffect } from "react";
+
 import Header from "./container/header";
 import Footer from "./container/footer";
 import About from "./pages/about/about";

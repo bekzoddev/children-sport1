@@ -11,7 +11,7 @@ const Footer = ()=> {
       <p>
           {
             (data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).home
@@ -22,7 +22,7 @@ const Footer = ()=> {
           <p>
           {
             (data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).about
@@ -33,7 +33,7 @@ const Footer = ()=> {
              <p>
           {
             (data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).aloqa
@@ -44,7 +44,7 @@ const Footer = ()=> {
              <p>
           {
             (data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).popular
@@ -55,7 +55,7 @@ const Footer = ()=> {
            <p>
           {
             (data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).top
@@ -66,7 +66,7 @@ const Footer = ()=> {
            <p>
           {
             (data.find(item => {
-              if (item.lang == lang) {
+              if (item.lang === lang) {
                 return item
               }
             })).shows
@@ -78,62 +78,62 @@ const Footer = ()=> {
             < option value = ""
             defaultValue disabled > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).janr
             }</option>
             < option value = "crime" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).crime
             } </option>
             < option value = "sport" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).sport
             } </option>
             < option value = "documentary" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).hujjat
             } </option>
             < option value = "romantic" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).romantik
             } </option>
             < option value = "biography" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).bio
             } </option>
             < option value = "drama" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).drama
             } </option>
             < option value = "history" > {
               (data.find(item => {
-                if (item.lang == lang) {
+                if (item.lang === lang) {
                   return item
                 }
               })).tarixiy
             } </option>
           </select>
-    
+
 
       </div>
    </div>
